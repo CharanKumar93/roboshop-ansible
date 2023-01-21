@@ -30,11 +30,16 @@
   #systemctl restart nginx &>>${LOG}
   #status_check
 #
-- name: Install Nginx
-  ansible.builtin.yum:
-    name: nginx
-    state: installed
+#- name: Install Nginx
+#  ansible.builtin.yum:
+#    name: nginx
+#    state: installed
+
+- name: This task will always make changes to the system
+  ansible.builtin.yum:  uptime
   register: out
+  check_mode: no
+  diff_mode: full
 
 - name: out
   debug:
