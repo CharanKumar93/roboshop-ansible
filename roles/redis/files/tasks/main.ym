@@ -46,3 +46,4 @@
     name: redis
     state: restarted
     enabled: yes
+    
