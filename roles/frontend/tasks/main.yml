@@ -29,18 +29,9 @@
   #print_head "Start Nginx"
   #systemctl restart nginx &>>${LOG}
   #status_check
-#
-#- name: Install Nginx
-#  ansible.builtin.yum:
-#    name: nginx
-#    state: installed
 
-- name: This task will always make changes to the system
-  ansible.builtin.shell:  uptime
-  register: out
-  check_mode: yes
+- name: Install Nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: installed
 
-
-- name: out
-  debug:
-    msg: "{{out}}"
