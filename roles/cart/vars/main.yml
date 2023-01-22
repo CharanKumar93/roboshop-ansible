@@ -1,2 +1,2 @@
 component: cart
-schema_load: false
+schema_load: true
