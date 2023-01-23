@@ -52,13 +52,13 @@
     state: restarted
     enabled: yes
 
-- name: Add application user
+- name: Add Application User
   community.rabbitmq.rabbitmq_user:
     user: roboshop
     password: "{{roboshop_rabbitmq_password}}"
     vhost: /
-    configure priv: .*
-    read priv: .*
-    write priv: .*
+    configure_priv: .*
+    read_priv: .*
+    write_priv: .*
     state: present
-    tags: adminstrator
+    tags: administrator
