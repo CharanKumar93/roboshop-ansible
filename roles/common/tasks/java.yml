@@ -29,7 +29,7 @@
   args:
     chdir: /app
 
-- name: App Pre_Req
+- name: SystemD setup
   ansible.builtin.include_tasks: "systemd.yml"
 
 - name: Load Schema
