@@ -21,7 +21,7 @@
     name: maven
     state: installed
 
-- name: App Pre_Req
+- name: App Pre-Req
   ansible.builtin.include_tasks: "app-prereq.yml"
 
 - name: Maven Build
