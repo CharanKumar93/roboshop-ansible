@@ -2,7 +2,7 @@
 #dnf module disable mysql -y &>>${LOG}
 #status_check
 #
-#print_head "Copy MySQL Repo file"
+#print_head "Copy MySQL Repo main.yml"
 #cp ${script_location}/files/mysql.repo /etc/yum.repos.d/mysql.repo &>>${LOG}
 #status_check
 #
@@ -26,7 +26,7 @@
 - name: Disable MySQL 8 version
   ansible.builtin.shell: dnf module disable mysql -y
 
-- name: Copy MySQL Repo file
+- name: Copy MySQL Repo main.yml
   ansible.builtin.copy:
     src: mysql.repo
     dest: /etc/yum.repos.d/mysql.repo

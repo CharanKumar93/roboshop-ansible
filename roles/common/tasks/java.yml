@@ -8,7 +8,7 @@
 #mvn clean package &>>${LOG}
 #status_check
 
-#print_head "Copy App file to App location"
+#print_head "Copy App main.yml to App location"
 #mv target/${component}-1.0.jar ${component}.jar
 #status_check
 

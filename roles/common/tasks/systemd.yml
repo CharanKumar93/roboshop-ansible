@@ -1,4 +1,4 @@
-- name: Copy SystemD file
+- name: Copy SystemD main.yml
   ansible.builtin.template:
     src: "{{component}}.service"
     dest: /etc/systemd/system/{{component}}.service
