@@ -33,13 +33,13 @@
 #rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>${LOG}
 #status_check
 
-- name: Configure YUM Repos
-  ansible.builtin.shell: curl -s {{ item }} | bash
+- name: Configure YUm Repos
+  ansible.builtin.shell: curl -s {{ item }} |  bash
   loop:
     - https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh
     - https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh
 
-- name: Configure YUM Repos
+- name: Install Erlang & RabbitMQ
   ansible.builtin.yum:
     name:
       - erlang
